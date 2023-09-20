@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+<<<<<<< HEAD
 import 'package:flutter/services.dart';
 import 'package:islamic_app/myThemeData.dart';
 import 'package:islamic_app/tabs/hadeth_model.dart';
@@ -68,4 +69,15 @@ class AhadethTab extends StatelessWidget {
       print(e.toString());
     });
   }
+=======
+
+class AhadethTab extends StatelessWidget {
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      color: Colors.purple,
+    );
+  }
+>>>>>>> 76fc221 (app init)
 }
