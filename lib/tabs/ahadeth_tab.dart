@@ -12,7 +12,6 @@ class AhadethTab extends StatelessWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.start,
             children: [Expanded(child: Divider(thickness: 3,color: MyThemeData.PrimaryColor,)),
-              Text("Ahadeth",style: TextStyle(fontSize: 60,color: Colors.black),)
             ],
           )
         ],
