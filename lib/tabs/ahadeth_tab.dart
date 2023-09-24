@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:islamic_app/ahadeth_details.dart';
 import 'package:islamic_app/myThemeData.dart';
-import 'package:islamic_app/tabs/hadeth_model.dart';
-
+import 'package:islamic_app/hadeth_model.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 class AhadethTab extends StatelessWidget {
   List<HadethModel> allAhadeth = [];
 
@@ -18,7 +19,7 @@ class AhadethTab extends StatelessWidget {
             thickness: 3,
             color: MyThemeData.PrimaryColor,
           ),
-          Text("ahadth", style: TextStyle(color: MyThemeData.blackColor)),
+          Text(AppLocalizations.of(context)!.ahadeth, style: TextStyle(color: MyThemeData.blackColor)),
           Divider(
             thickness: 3,
             color: MyThemeData.PrimaryColor,
@@ -34,11 +35,16 @@ class AhadethTab extends StatelessWidget {
               itemBuilder: (context, index) {
                 return InkWell(
                   onTap: () {
-                    Navigator.pushNamed(context, routeName)
+                    Navigator.pushNamed(context, HadethDetails.routeName,arguments: allAhadeth[index]);
                   },
                   child: Text(
-                      style: Theme.of(context).textTheme.bodyMedium?.copyWith(color: MyThemeData.blackColor),
-                      allAhadeth[index].title,textAlign:TextAlign.center,),
+                    style: Theme.of(context)
+                        .textTheme
+                        .bodyMedium
+                        ?.copyWith(color: MyThemeData.blackColor),
+                    allAhadeth[index].title,
+                    textAlign: TextAlign.center,
+                  ),
                 );
               },
               itemCount: allAhadeth.length,
