@@ -16,82 +16,89 @@ class _SebhaTabState extends State<SebhaTab> {
   ];
   int index = 0;
   int counter = 0;
+  var rotete=5;
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        Column(
-          children: [
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              crossAxisAlignment: CrossAxisAlignment.end,
-              children: [
-
-                Image.asset("assets/images/"),
-              ],
-            ),
-          ],
-        ),
-        SizedBox(
-          height: 30,
-        ),
-        Text("Tasbeha Counter",
-            style: Theme.of(context)
-                .textTheme
-                .bodyMedium!
-                .copyWith(color: MyThemeData.blackColor)),
-        SizedBox(
-          height: 30,
-        ),
-        InkWell(
-          onTap: () {
-            displayCounter();
-          },
-          child: Column(
+    return Center(
+      child: Column(
+        children: [
+          Column(
             children: [
               Column(
                 children: [
-                  Container(
-                    decoration: BoxDecoration(
-                        color: Color(0xffB7935F),
-                        borderRadius: BorderRadius.only(
-                          topLeft: Radius.elliptical(14, 14),
-                          topRight: Radius.elliptical(14, 14),
-                          bottomLeft: Radius.elliptical(14, 14),
-                          bottomRight: Radius.elliptical(14, 14),
-                        )),
-                    child: Padding(
-                      padding: const EdgeInsets.all(6.0),
-                      child: Text(" $counter ",
-                          style: Theme.of(context)
-                              .textTheme
-                              .bodyMedium!
-                              .copyWith(color: MyThemeData.blackColor)),
-                    ),
+
+                  Padding(
+                    padding: const EdgeInsets.only(left: 45),
+                    child: Image.asset("assets/images/head_sebha.png"),
                   ),
-                  SizedBox(
-                    height: 20,
-                  ),
-                  Container(
-                    decoration: BoxDecoration(
-                        color: MyThemeData.PrimaryColor,
-                        borderRadius: BorderRadius.circular(25)),
-                    child: Padding(
-                      padding: const EdgeInsets.all(9),
-                      child: Text("${tasabeh[index]}",
-                          style: Theme.of(context)
-                              .textTheme
-                              .bodyMedium!
-                              .copyWith(color: Colors.white)),
-                    ),
-                  ),
+                  RotationTransition( turns: new AlwaysStoppedAnimation(rotete / 360),
+                      child: Image.asset("assets/images/body_sebha.png")),
                 ],
-              )
+              ),
             ],
           ),
-        )
-      ],
+          SizedBox(
+            height: 30,
+          ),
+          Text("Tasbeha Counter",
+              style: Theme.of(context)
+                  .textTheme
+                  .bodyMedium!
+                  .copyWith(color: MyThemeData.blackColor)),
+          SizedBox(
+            height: 30,
+          ),
+          InkWell(
+            onTap: () {
+              displayCounter();
+              rotete+=5;
+            },
+            child: Column(
+              children: [
+                Column(
+                  children: [
+                    Container(
+                      decoration: BoxDecoration(
+                          color: Color(0xffB7935F),
+                          borderRadius: BorderRadius.only(
+                            topLeft: Radius.elliptical(14, 14),
+                            topRight: Radius.elliptical(14, 14),
+                            bottomLeft: Radius.elliptical(14, 14),
+                            bottomRight: Radius.elliptical(14, 14),
+                          )),
+                      child: Padding(
+                        padding: const EdgeInsets.all(6.0),
+                        child: Text(" $counter ",
+                            style: Theme.of(context)
+                                .textTheme
+                                .bodyMedium!
+                                .copyWith(color: MyThemeData.blackColor)),
+                      ),
+                    ),
+                    SizedBox(
+                      height: 20,
+                    ),
+                    Container(
+                      decoration: BoxDecoration(
+                          color: MyThemeData.PrimaryColor,
+                          borderRadius: BorderRadius.circular(25)),
+                      child: Padding(
+                        padding: const EdgeInsets.all(9),
+                        child: Text("${tasabeh[index]}",
+                            style: Theme.of(context)
+                                .textTheme
+                                .bodyMedium!
+                                .copyWith(color: Colors.white)),
+                      ),
+                    ),
+                  ],
+                )
+              ],
+            ),
+          )
+        ],
+      ),
     );
   }
 
