@@ -27,7 +27,8 @@ class _SebhaTabState extends State<SebhaTab> {
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.end,
               children: [
-                Image.asset("assets/images/real_sebha.png"),
+
+                Image.asset("assets/images/"),
               ],
             ),
           ],
