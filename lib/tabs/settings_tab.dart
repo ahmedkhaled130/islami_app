@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:islamic_app/button_sheets/language_button_sheet.dart';
 import 'package:islamic_app/myThemeData.dart';
 
 class SettingTab extends StatefulWidget {
@@ -60,6 +61,7 @@ class _SettingTabState extends State<SettingTab> {
   showLanguageButtonSheet(){
 
     showModalBottomSheet(context: context,
+
       isScrollControlled: true,
       shape: OutlineInputBorder(
         borderSide: BorderSide(
@@ -67,9 +69,8 @@ class _SettingTabState extends State<SettingTab> {
         ),
         borderRadius: BorderRadius.only(topLeft: Radius.circular(15),topRight: Radius.circular(15))
       ),
-      builder: (context) => Container(
-        height: MediaQuery.of(context).size.height*0.3,
-    ),);
+      builder: (context) => LanguageButtonSheet(),
+    );
   }
   showThemingButtonSheet(){
 

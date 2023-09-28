@@ -28,6 +28,7 @@ class _SebhaTabState extends State<SebhaTab> {
               Column(
                 children: [
 
+
                   Padding(
                     padding: const EdgeInsets.only(left: 45),
                     child: Image.asset("assets/images/head_of_seb7a.png"),
@@ -124,4 +125,5 @@ class _SebhaTabState extends State<SebhaTab> {
       });
 
   }}
+
 }

@@ -7,11 +7,13 @@ import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:islamic_app/tabs/hadeth_details.dart';
 import 'package:islamic_app/tabs/sura_details.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 void main() {
   runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
+
   const MyApp({super.key});
 
   // This widget is the root of your application.
@@ -22,6 +24,7 @@ class MyApp extends StatelessWidget {
       supportedLocales: AppLocalizations.supportedLocales,
       debugShowCheckedModeBanner: false,
       initialRoute: HomeScreen.routeName,
+
       routes: {
         HomeScreen.routeName: (context) => HomeScreen(),
         SuraDetailsScreen.routeName: (context) => SuraDetailsScreen(),
@@ -31,4 +34,5 @@ class MyApp extends StatelessWidget {
       darkTheme:MyThemeData.darkTheme,
     );
   }
+
 }
