@@ -1,15 +1,12 @@
-import 'dart:ui';
 
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_intro/Tabs/ahadeth_tab.dart';
 import 'package:flutter_intro/Tabs/quran_tab.dart';
-import 'package:flutter_intro/Tabs/radio_tab.dart';
 import 'package:flutter_intro/Tabs/sebha_tab.dart';
 import 'package:flutter_intro/Tabs/settings_tab.dart';
 import 'package:flutter_intro/mythemedata.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 class HomeScreen extends StatefulWidget {
   static const String routeName = "home";

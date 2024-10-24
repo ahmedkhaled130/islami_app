@@ -5,7 +5,6 @@ import 'package:flutter_intro/home.dart';
 import 'package:flutter_intro/my_provider/my_provider.dart';
 import 'package:flutter_intro/mythemedata.dart';
 import 'package:flutter_intro/sura_details.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 
 void main() async {
